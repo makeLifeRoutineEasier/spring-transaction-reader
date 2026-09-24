@@ -1,0 +1,112 @@
+[
+  {
+    "transactionId": "TXN10001",
+    "accountNumber": "453211098",
+    "date": "2026-06-15T08:30:00Z",
+    "description": "Starbucks Coffee",
+    "category": "Food & Dining",
+    "type": "debit",
+    "amount": 6.50,
+    "currency": "USD",
+    "status": "COMPLETED"
+  },
+  {
+    "transactionId": "TXN10002",
+    "accountNumber": "453211098",
+    "date": "2026-06-16T12:00:00Z",
+    "description": "Employer Payroll",
+    "category": "Income",
+    "type": "credit",
+    "amount": 2500.00,
+    "currency": "USD",
+    "status": "COMPLETED"
+  },
+  {
+    "transactionId": "TXN10003",
+    "accountNumber": "987654321",
+    "date": "2026-06-17T19:45:00Z",
+    "description": "Amazon Prime Subscription",
+    "category": "Entertainment",
+    "type": "debit",
+    "amount": 14.99,
+    "currency": "USD",
+    "status": "COMPLETED"
+  },
+  {
+    "transactionId": "TXN10004",
+    "accountNumber": "453211098",
+    "date": "2026-06-18T09:15:00Z",
+    "description": "Transfer to Savings",
+    "category": "Transfer",
+    "type": "debit",
+    "amount": 500.00,
+    "currency": "USD",
+    "status": "PENDING"
+  },
+  {
+    "transactionId": "TXN10005",
+    "accountNumber": "675849302",
+    "date": "2026-06-19T14:20:00Z",
+    "description": "Uber Ride - JFK Airport",
+    "category": "Transportation",
+    "type": "debit",
+    "amount": 45.75,
+    "currency": "USD",
+    "status": "COMPLETED"
+  },
+  {
+    "transactionId": "TXN10006",
+    "accountNumber": "453211098",
+    "date": "2026-06-20T11:00:00Z",
+    "description": "Dividend Payment - AAPL",
+    "category": "Investment Income",
+    "type": "credit",
+    "amount": 87.40,
+    "currency": "USD",
+    "status": "COMPLETED"
+  },
+  {
+    "transactionId": "TXN10007",
+    "accountNumber": "112233445",
+    "date": "2026-06-21T22:10:00Z",
+    "description": "Netflix Monthly",
+    "category": "Entertainment",
+    "type": "debit",
+    "amount": 19.99,
+    "currency": "USD",
+    "status": "FAILED"
+  },
+  {
+    "transactionId": "TXN10008",
+    "accountNumber": "453211098",
+    "date": "2026-06-22T07:30:00Z",
+    "description": "ATM Withdrawal - Chase",
+    "category": "Cash",
+    "type": "debit",
+    "amount": 200.00,
+    "currency": "USD",
+    "status": "COMPLETED"
+  },
+  {
+    "transactionId": "TXN10009",
+    "accountNumber": "987654321",
+    "date": "2026-06-23T16:45:00Z",
+    "description": "Freelance Payment - Web Design",
+    "category": "Income",
+    "type": "credit",
+    "amount": 1250.00,
+    "currency": "USD",
+    "status": "COMPLETED"
+  },
+  {
+    "transactionId": "TXN10010",
+    "accountNumber": "675849302",
+    "date": "2026-06-24T13:00:00Z",
+    "description": "Whole Foods Grocery",
+    "category": "Groceries",
+    "type": "debit",
+    "amount": 132.28,
+    "currency": "USD",
+    "status": "COMPLETED"
+  }
+]

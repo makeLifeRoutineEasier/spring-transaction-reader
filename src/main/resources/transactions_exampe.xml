@@ -1,0 +1,122 @@
+<transactions>
+    <transaction>
+        <date>2026-07-11</date>
+        <description>Bookstore Purchase</description>
+        <amount>-27.50</amount>
+        <category>Education</category>
+    </transaction>
+    <transaction>
+        <date>2026-07-12</date>
+        <description>Payroll Direct Deposit</description>
+        <amount>2500.00</amount>
+        <category>Salary</category>
+    </transaction>
+    <transaction>
+        <date>2026-07-12</date>
+        <description>Supermarket</description>
+        <amount>-118.42</amount>
+        <category>Food</category>
+    </transaction>
+    <transaction>
+        <date>2026-07-13</date>
+        <description>Train Ticket</description>
+        <amount>-45.00</amount>
+        <category>Transportation</category>
+    </transaction>
+    <transaction>
+        <date>2026-07-13</date>
+        <description>Concert Tickets</description>
+        <amount>-150.00</amount>
+        <category>Entertainment</category>
+    </transaction>
+    <transaction>
+        <date>2026-07-14</date>
+        <description>Water Bill</description>
+        <amount>-38.60</amount>
+        <category>Utilities</category>
+    </transaction>
+    <transaction>
+        <date>2026-07-14</date>
+        <description>Dividend Payment</description>
+        <amount>62.18</amount>
+        <category>Income</category>
+    </transaction>
+    <transaction>
+        <date>2026-07-15</date>
+        <description>Dentist Visit</description>
+        <amount>-175.00</amount>
+        <category>Health</category>
+    </transaction>
+    <transaction>
+        <date>2026-07-15</date>
+        <description>New Laptop</description>
+        <amount>-1299.99</amount>
+        <category>Shopping</category>
+    </transaction>
+    <transaction>
+        <date>2026-07-16</date>
+        <description>Rent Payment</description>
+        <amount>-1500.00</amount>
+        <category>Housing</category>
+    </transaction>
+    <transaction>
+        <date>2026-07-16</date>
+        <description>Refund - Returned Item</description>
+        <amount>45.99</amount>
+        <category>Shopping</category>
+    </transaction>
+    <transaction>
+        <date>2026-07-17</date>
+        <description>Ride Share</description>
+        <amount>-18.75</amount>
+        <category>Transportation</category>
+    </transaction>
+    <transaction>
+        <date>2026-07-17</date>
+        <description>Birthday Gift</description>
+        <amount>-75.00</amount>
+        <category>Giving</category>
+    </transaction>
+    <transaction>
+        <date>2026-07-18</date>
+        <description>Cloud Storage Subscription</description>
+        <amount>-2.99</amount>
+        <category>Utilities</category>
+    </transaction>
+    <transaction>
+        <date>2026-07-18</date>
+        <description>Freelance Payment</description>
+        <amount>1200.00</amount>
+        <category>Income</category>
+    </transaction>
+    <transaction>
+        <date>2026-07-19</date>
+        <description>Bakery</description>
+        <amount>-12.40</amount>
+        <category>Food</category>
+    </transaction>
+    <transaction>
+        <date>2026-07-19</date>
+        <description>Parking Fee</description>
+        <amount>-6.00</amount>
+        <category>Transportation</category>
+    </transaction>
+    <transaction>
+        <date>2026-07-20</date>
+        <description>Pet Insurance</description>
+        <amount>-32.00</amount>
+        <category>Health</category>
+    </transaction>
+    <transaction>
+        <date>2026-07-20</date>
+        <description>Hotel Booking</description>
+        <amount>-245.00</amount>
+        <category>Travel</category>
+    </transaction>
+    <transaction>
+        <date>2026-07-21</date>
+        <description>Magazine Subscription</description>
+        <amount>-8.99</amount>
+        <category>Entertainment</category>
+    </transaction>
+</transactions>

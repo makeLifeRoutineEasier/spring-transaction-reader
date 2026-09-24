@@ -12,6 +12,7 @@ public class FileFilter {
      public static BOMInputStream createBomInputStream(InputStream is) throws IOException {
           return BOMInputStream.builder()
                   .setInputStream(is)
+                  .setInclude(false)
                   .setByteOrderMarks(
                        ByteOrderMark.UTF_8,
                        ByteOrderMark.UTF_16LE,

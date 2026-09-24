@@ -1,4 +1,4 @@
-package validation;
+package java.validation;
 
 import config.ConfigManager;
 import org.slf4j.Logger;
@@ -14,8 +14,9 @@ public class FileInitializer {
 
     public static boolean checkExtension(File file) throws IOException {
         logger.info("Checking extension for file: {}", file.getAbsolutePath());
+
         String fileName = file.getName();
-        String extension = fileName.substring(fileName.lastIndexOf(".") + 1);
+        String extension = getExtension(fileName);
         logger.debug("Extracted extension: {}", extension);
 
         Set<String> availableExtensions = ConfigManager.loadConfig().getAvailableExtensions();
@@ -30,4 +31,9 @@ public class FileInitializer {
 
         return isAvailable;
     }
+
+    public static String getExtension(String fileName){
+        return fileName.substring(fileName.lastIndexOf(".") + 1);
+    }
 }
+

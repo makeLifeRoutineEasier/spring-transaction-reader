@@ -4,8 +4,11 @@ import model.Transaction;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.List;
+import java.util.LinkedHashSet;
 
+/*
+*Strategy pattern is used to manage different file extensions
+ */
 public interface FileReader {
-    public List<Transaction> convertFile(File file) throws IOException;
+    public LinkedHashSet<Transaction> readFile(File file) throws IOException;
 }

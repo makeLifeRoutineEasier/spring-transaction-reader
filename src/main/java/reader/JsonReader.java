@@ -4,21 +4,25 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import model.Transaction;
+import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.List;
+import java.util.LinkedHashSet;
 
-public class JsonReader implements FileReader{
+@Component("json")
+public class JsonReader implements FileReader {
 
     private final ObjectMapper mapper = new ObjectMapper();
 
-    public JsonReader(){
+    public JsonReader() {
         mapper.registerModule(new JavaTimeModule());
     }
+
     @Override
-    public List<Transaction> convertFile(File file) throws IOException {
+    public LinkedHashSet<Transaction> readFile(File file) throws IOException {
         return mapper.readValue(file, new TypeReference<>() {
         });
     }
 }
+

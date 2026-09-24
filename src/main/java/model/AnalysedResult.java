@@ -1,17 +1,30 @@
 package model;
 
-import java.time.LocalDateTime;
+import java.util.Collection;
 
 public class AnalysedResult {
     private final float revenue;
     private final float expenditure;
-    private final LocalDateTime mostProfitablePeriod;
-    private final LocalDateTime mostUnprofitablePeriod;
 
-    public AnalysedResult(float revenue, float expenditure, LocalDateTime mostProfitablePeriod, LocalDateTime mostUnprofitablePeriod) {
-        this.revenue = revenue;
-        this.expenditure = expenditure;
-        this.mostProfitablePeriod = mostProfitablePeriod;
-        this.mostUnprofitablePeriod = mostUnprofitablePeriod;
+    public AnalysedResult(Collection<Transaction> transactions) {
+        this.revenue = (float) transactions.stream()
+                .filter(t -> t.getType().getName().equals("INBOUND"))
+                .mapToDouble(Transaction::getAmount)
+                .sum();
+
+        this.expenditure = (float) transactions.stream()
+                .filter(t -> t.getType().getName().equals("OUTBOUND"))
+                .mapToDouble(Transaction::getAmount)
+                .sum();
     }
+
+    public float getRevenue() {
+        return revenue;
+    }
+
+    public float getExpenditure() {
+        return expenditure;
+    }
+
 }
+

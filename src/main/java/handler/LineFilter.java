@@ -9,18 +9,16 @@ public class LineFilter {
             line.replaceAll("\\r\\n|\\r|\\n", System.lineSeparator());
     private static final UnaryOperator<String> clearEmptyPlaces = line ->
             line.replaceAll("(?m)^\s+", "");
-    private static final UnaryOperator<String> clearUnnecessarySymbols = line ->
-            line.replaceAll("[^a-zA-Z0-9\\s,.]", "");
+
 
     private static final Set<UnaryOperator<String>> allFilters = Set.of(
             normalizeEOL,
-            clearEmptyPlaces,
-            clearUnnecessarySymbols
-    );
+            clearEmptyPlaces
+            );
 
-    public static String applyFilters(String line){
+    public static String applyFilters(String line) {
         String result = line;
-        for (UnaryOperator<String> filter : allFilters){
+        for (UnaryOperator<String> filter : allFilters) {
             result = filter.apply(result);
         }
         return result;

@@ -1,0 +1,29 @@
+Date,Transaction,Amount,Category
+2026-06-25,Grocery Store,-45.00,Food
+2026-06-26,Payroll Direct Deposit,2500.00,Salary
+2026-06-27,Coffee Shop,-4.75,Food
+2026-06-27,Gas Station,-52.30,Transportation
+2026-06-28,Netflix Subscription,-15.99,Entertainment
+2026-06-28,Restaurant Dinner,-68.40,Food
+2026-06-29,Electric Bill,-120.00,Utilities
+2026-06-29,Amazon Purchase,-34.99,Shopping
+2026-06-30,Rent Payment,-1500.00,Housing
+2026-07-01,Freelance Payment,850.00,Income
+2026-07-01,Pharmacy,-22.15,Health
+2026-07-02,Gym Membership,-39.99,Health
+2026-07-02,Online Course,59.99,Education
+2026-07-03,ATM Withdrawal,-100.00,Cash
+2026-07-03,Cell Phone Bill,-85.00,Utilities
+2026-07-04,Movie Tickets,-28.50,Entertainment
+2026-07-05,Grocery Store,-92.75,Food
+2026-07-05,Payroll Direct Deposit,2500.00,Salary
+2026-07-06,Car Insurance,-145.00,Transportation
+2026-07-06,Interest Earned,3.42,Income
+2026-07-07,Pet Store,-41.20,Shopping
+2026-07-07,Hair Salon,-60.00,Personal Care
+2026-07-08,Streaming Music,-9.99,Entertainment
+2026-07-08,Charity Donation,-50.00,Giving
+2026-07-09,Flight Booking,-320.00,Travel
+2026-07-09,Hotel Reservation,-210.00,Travel
+2026-07-10,Tax Refund,480.00,Income
+2026-07-10,Internet Bill,-70.00,Utilities
