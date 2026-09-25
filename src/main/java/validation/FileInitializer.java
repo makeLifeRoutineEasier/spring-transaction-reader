@@ -1,4 +1,4 @@
-package java.validation;
+package validation;
 
 import config.ConfigManager;
 import org.slf4j.Logger;
