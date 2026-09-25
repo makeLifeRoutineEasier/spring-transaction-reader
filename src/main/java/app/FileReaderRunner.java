@@ -3,17 +3,17 @@ package app;
 import handler.Filtering;
 import model.AnalysedResult;
 import model.Transaction;
+import org.jspecify.annotations.NonNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import reader.FileReader;
 import reader.FileReaderFactory;
+import validation.FileInitializer;
 
 import java.io.File;
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.LinkedHashSet;
-import java.validation.FileInitializer;
 
 public class FileReaderRunner implements CommandLineRunner {
 
@@ -26,13 +26,13 @@ public class FileReaderRunner implements CommandLineRunner {
 
     //example for current files
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String @NonNull ... args) throws Exception {
 
-        File input1 = new File("src/test/transactions_example.json");
+        File input1 = new File("src/main/resources/transactions_example.json");
         readFile(input1);
-        File input2 = new File("src/test/transactions_example.json");
+        File input2 = new File("src/main/resources/transactions_example.csv");
         readFile(input2);
-        File input3 = new File("src/test/transactions_example.json");
+        File input3 = new File("src/main/resources/transactions_example.xml");
         readFile(input3);
     }
 
@@ -44,11 +44,9 @@ public class FileReaderRunner implements CommandLineRunner {
         LinkedHashSet<Transaction> parsedResult = reader.readFile(filtered);
         AnalysedResult result = new AnalysedResult(parsedResult);
 
-        LocalDateTime now = LocalDateTime.now();
-
         for (Transaction t : parsedResult) {
 
-            String dateStr = now.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+            String dateStr = t.getDateTime().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
 
             log.info("""
                      \s
