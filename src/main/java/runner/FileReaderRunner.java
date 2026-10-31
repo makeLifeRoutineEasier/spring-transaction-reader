@@ -1,26 +1,24 @@
-package app;
+package runner;
 
-import handler.Filtering;
 import model.AnalysedResult;
 import model.Transaction;
 import org.jspecify.annotations.NonNull;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 import reader.FileReader;
 import reader.FileReaderFactory;
-import validation.FileInitializer;
+import validation.FileChecker;
 
 import java.io.File;
 import java.time.format.DateTimeFormatter;
 import java.util.LinkedHashSet;
 
+@Component
 public class FileReaderRunner implements CommandLineRunner {
 
     private final FileReaderFactory fileReaderFactory;
-    private final Logger log = LoggerFactory.getLogger(FileReaderRunner.class);
 
-    private FileReaderRunner(FileReaderFactory fileReaderFactory) {
+    public FileReaderRunner(FileReaderFactory fileReaderFactory) {
         this.fileReaderFactory = fileReaderFactory;
     }
 
@@ -37,34 +35,39 @@ public class FileReaderRunner implements CommandLineRunner {
     }
 
     private void readFile(File file) throws Exception {
-        File filtered = Filtering.filterFile(file);
 
-        FileReader reader = fileReaderFactory.getFileReader(FileInitializer.getExtension(filtered.getName()));
+        String fileExtension = FileChecker.getExtension(file.getName());
 
-        LinkedHashSet<Transaction> parsedResult = reader.readFile(filtered);
+        if (!FileChecker.checkExtension(file)) {
+            throw new IllegalArgumentException("No support file extension for \"" + file.getName() + "\"");
+        }
+
+        FileReader reader = fileReaderFactory.getFileReader(fileExtension);
+
+        LinkedHashSet<Transaction> parsedResult = reader.readFile(file);
         AnalysedResult result = new AnalysedResult(parsedResult);
 
         for (Transaction t : parsedResult) {
 
             String dateStr = t.getDateTime().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
 
-            log.info("""
-                     \s
-                     Transaction
-                     Transaction type: %s
-                     Amount: %f
-                     Account: %s
-                     Category: %s
-                     Date: %s
-                    \s""".formatted(t.getType().getName(), t.getAmount(), t.getAccount(), t.getCategory(), dateStr));
+            System.out.printf("""
+                    
+                    Transaction
+                    Transaction type: %s
+                    Amount: %f
+                    Account: %s
+                    Category: %s
+                    Date: %s
+                    %n""", t.getType().getName(), t.getAmount(), t.getAccount(), t.getCategory(), dateStr);
         }
 
-        log.info("""
-                \s
+        System.out.printf("""
+                
                 Analysed result:
                 Revenue: %f
                 Expenditure: %f
-                \s""".formatted(result.getRevenue(), result.getExpenditure()));
+                 %n""", result.getRevenue(), result.getExpenditure());
     }
 }
 

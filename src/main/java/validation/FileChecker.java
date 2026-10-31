@@ -8,9 +8,9 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Set;
 
-public class FileInitializer {
+public class FileChecker {
 
-    private static final Logger logger = LoggerFactory.getLogger(FileInitializer.class);
+    private static final Logger logger = LoggerFactory.getLogger(FileChecker.class);
 
     public static boolean checkExtension(File file) throws IOException {
         logger.info("Checking extension for file: {}", file.getAbsolutePath());

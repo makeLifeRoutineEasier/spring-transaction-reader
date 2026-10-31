@@ -8,12 +8,12 @@ public class AnalysedResult {
 
     public AnalysedResult(Collection<Transaction> transactions) {
         this.revenue = (float) transactions.stream()
-                .filter(t -> t.getType().getName().equals("INBOUND"))
+                .filter(t -> t.getType().getName().equalsIgnoreCase("inbound"))
                 .mapToDouble(Transaction::getAmount)
                 .sum();
 
         this.expenditure = (float) transactions.stream()
-                .filter(t -> t.getType().getName().equals("OUTBOUND"))
+                .filter(t -> t.getType().getName().equalsIgnoreCase("outbound"))
                 .mapToDouble(Transaction::getAmount)
                 .sum();
     }
