@@ -1,9 +1,9 @@
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import reader.FileReader;
-import reader.FileReaderFactory;
-import reader.JsonReader;
+import transaction_reader.reader.FileReader;
+import transaction_reader.reader.FileReaderFactory;
+import transaction_reader.reader.JsonReader;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

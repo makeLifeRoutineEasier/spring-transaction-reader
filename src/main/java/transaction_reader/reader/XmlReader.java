@@ -1,8 +1,8 @@
-package reader;
+package transaction_reader.reader;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
-import model.Transaction;
+import transaction_reader.model.Transaction;
 import org.springframework.stereotype.Component;
 
 import java.io.File;

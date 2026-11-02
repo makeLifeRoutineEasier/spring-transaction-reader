@@ -1,4 +1,4 @@
-package model;
+package transaction_reader.model;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonCreator;

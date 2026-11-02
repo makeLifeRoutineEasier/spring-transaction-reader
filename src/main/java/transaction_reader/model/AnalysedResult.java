@@ -1,4 +1,4 @@
-package model;
+package transaction_reader.model;
 
 import java.util.Collection;
 

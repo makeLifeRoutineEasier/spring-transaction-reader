@@ -1,6 +1,6 @@
-package validation;
+package transaction_reader.validation;
 
-import config.ConfigManager;
+import transaction_reader.config.ConfigManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

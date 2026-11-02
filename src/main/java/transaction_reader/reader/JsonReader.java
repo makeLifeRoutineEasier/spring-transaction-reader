@@ -1,9 +1,9 @@
-package reader;
+package transaction_reader.reader;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import model.Transaction;
+import transaction_reader.model.Transaction;
 import org.springframework.stereotype.Component;
 
 import java.io.File;

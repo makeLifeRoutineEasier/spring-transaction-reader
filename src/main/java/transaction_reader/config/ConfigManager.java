@@ -1,8 +1,8 @@
-package config;
+package transaction_reader.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
-import model.FileConfig;
+import transaction_reader.model.FileConfig;
 
 import java.io.File;
 import java.io.IOException;

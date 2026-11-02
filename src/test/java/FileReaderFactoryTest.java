@@ -1,8 +1,8 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
-import reader.FileReader;
-import reader.FileReaderFactory;
+import transaction_reader.reader.FileReader;
+import transaction_reader.reader.FileReaderFactory;
 
 import java.util.HashMap;
 import java.util.Map;

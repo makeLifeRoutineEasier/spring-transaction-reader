@@ -1,4 +1,4 @@
-package reader;
+package transaction_reader.reader;
 
 
 import org.springframework.stereotype.Component;
