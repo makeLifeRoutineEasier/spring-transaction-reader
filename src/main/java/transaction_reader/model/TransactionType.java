@@ -8,7 +8,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public enum TransactionType {
     INBOUND("INBOUND"),
-    OUTBAND("OUTBOUND");
+    OUTBOUND("OUTBOUND");
 
     private final String name;
 
@@ -19,8 +19,8 @@ public enum TransactionType {
     @JsonCreator
     public static TransactionType fromString(String value) {
         return switch (value.toLowerCase()) {
-            case "inbound", "debit", "incoming" -> INBOUND;
-            case "outbound", "credit", "outgoing" -> OUTBAND;
+            case "inbound", "debit", "income", "incoming" -> INBOUND;
+            case "outbound", "credit", "expense", "outgoing" -> OUTBOUND;
             default -> throw new IllegalArgumentException(String.format("Cannot define transaction type: %s", value));
         };
 
